@@ -2,4 +2,4 @@
 NLINES = 2
 
 # Source File
-SOURCE_FILE = 'testfile.txt'
+SOURCE_FILE = "testfile.txt"

@@ -1,7 +1,8 @@
 import os
 
+
 class watcher:
-    def __init__(self,filename):
+    def __init__(self, filename):
         self.previous_stamp = 0
         self.filename = filename
         self.ready = False
@@ -10,8 +11,8 @@ class watcher:
             self.ready = True
             print("File Ready")
         except:
-            print("Failed to load file "+self.filename)
-    
+            print("Failed to load file " + self.filename)
+
     def check(self):
         if not self.ready:
             print("File Not Open")
@@ -24,11 +25,11 @@ class watcher:
 
 
 class watchdog:
-    def __init__(self,filename) -> None:
+    def __init__(self, filename) -> None:
         self.watcherOb = watcher(filename)
-    
+
     def get_changes(self) -> str:
         if self.watcherOb.check() == 1:
-            return "File Change Detected "+str(self.watcherOb.previous_stamp)
+            return "File Change Detected " + str(self.watcherOb.previous_stamp)
         else:
             return "NA"
