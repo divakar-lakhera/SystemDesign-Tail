@@ -1,3 +1,9 @@
+"""
+    watchdog.py
+    Keeps a watch in a file for changes.
+    @Author: Divakar Lakhera
+
+"""
 import os
 
 

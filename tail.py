@@ -1,3 +1,9 @@
+"""
+    tail.py
+    Implimentaion of tail -f in python
+    @Author: Divakar Lakhera
+    
+"""
 import os
 import args
 

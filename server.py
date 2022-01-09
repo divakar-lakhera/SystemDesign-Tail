@@ -23,13 +23,16 @@ def checker_thread():
     taily = tail.tailn(n_lines=args.NLINES, filename=args.SOURCE_FILE)
     while True:
         sleep(0.5)
+        #   Check if file has some changes
         ret = doggy.get_changes()
         if ret == "NA":
             continue
         print(ret)
+        # Get last N lines
         printSocket(taily.get_tail())
 
 
+# File Checker Thread
 thread = Thread(target=checker_thread)
 
 
